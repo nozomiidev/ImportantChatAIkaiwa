@@ -1,28 +1,33 @@
 # 作業状態
 
-## 現在の目的
-保存対象を ChatGPT の会話ではなく、クラウドブラウザーで開いている Gemini の既存スレッド「トポス創発法」に修正する。実際の Gemini スレッドを Markdown で保存し、作業記録も訂正する。
+## 状態
+完了。対象のGemini会話、作業手順、訂正履歴、最終検証をmainへコミット済み。
 
-## 保存先
+## 目的と保存先
+- 対象: クラウドブラウザーで開いていたGeminiの既存スレッド「トポス創発法」
 - リポジトリ: [nozomiidev/ImportantChatAIkaiwa](https://github.com/nozomiidev/ImportantChatAIkaiwa)
-- ブランチ: `main`
-- 会話記録: `gemini/neon/conversation.md`（現在は誤った ChatGPT 会話のため、Gemini スレッド本文に置き換える）
-- 作業ログ: `gemini/neon/sagyo_workflow/`
-- 作業再開前の `main` 先端: `07601cb7d17c0c289f83f3f55f02d27f4527261e`
+- ブランチ: main
+- 会話記録: gemini/neon/conversation.md
+- 作業記録: gemini/neon/sagyo_workflow/
 
-## 修正の理由
-直前の保存は「この会話」を ChatGPT の会話と解釈してしまった。ユーザーの訂正を受けてクラウドブラウザーの現在のタブを再確認したところ、Gemini に「トポス創発法」という既存スレッドが開いていた。前回の「新規チャット画面」という説明は誤り。対象をこの Gemini スレッドへ切り替える。
+## 完了した内容
+- Geminiスレッド上のユーザープロンプト9件とGemini回答9件をMarkdownで保存。
+- 誤って保存したChatGPT会話はGemini本文へ置き換え、最初の対象誤認とユーザーの訂正をprogress.mdおよびdecisions.mdに記録。
+- README、再利用手順、会話テンプレートを実際の保存形式に合わせて更新。
+- Gemini画面から新規メッセージを送っていない。Googleドキュメントへの書き出しも行っていない。
+- アカウントに結び付くGeminiスレッドURLやIDを公開ファイルへ記載していない。
 
-## Gemini スレッドの確認状況
-- [x] 現在のタブが Gemini の既存会話であることを確認。
-- [x] タイトル「トポス創発法」、表示上 9 組のユーザープロンプトと Gemini の回答を確認。
-- [x] 会話内容の可視テキストをアクセシビリティ表示から取得。
-- [ ] 9 往復の本文を GitHub Markdown に整え、`conversation.md` を置き換える。
-- [ ] 前回の取り違えと訂正を進捗・判断ログに明記。
-- [ ] GitHub 上の本文、ファイル一覧、最新コミットを確認し、この状態ファイルを最終化。
+## チェックポイント
+- Gemini会話差し替えコミット: cb4b8a303571ab077a6ea2ec56f706cfc6381ace
+- 会話ファイルblob SHA: eff6d5a10c273896c386a3852399a00feaa241b2
+- 最終検証を記録した直前コミット: 14bcc73afe6d4d8a7668b4c0f11cc6262851e032
+- この状態ファイルの更新が最終チェックポイント。再開時はmainの現在の先端をGitHubから取得し、この更新コミットを確認する。
 
-## 中断から再開する場合
-最初にこのファイル、次に `sagyo_workflow/progress.md` と `sagyo_workflow/decisions.md` を読む。最新の `main` 先端を取得し、既存ファイルの blob SHA を読んでから更新する。未完了項目だけを再開し、確認したコミット SHA を進捗と状態へ反映する。Gemini のスレッド URL はアカウントに紐づくため、公開アーカイブへ書かない。
+## 検証結果
+- GitHubからconversation.mdを読み戻し、ユーザーとGeminiの見出しが各9件、コードフェンスが7組あることを確認。
+- gemini/neon/ と sagyo_workflow/ のファイル一覧を確認。README内の相対リンク6件はすべて存在。
+- 会話セッションURL、会話ID、アクセシビリティ読み取りのValueメタデータは本文に含まれていない。
+- 数式などが画面のアクセシビリティ表示で分割されていた箇所はMarkdownで読みやすく結合。空白やUI装飾は元画面と完全一致するものとして扱わない。
 
-## 保存上の注意
-ユーザーが指定した公開リポジトリに、現在開いている Gemini 会話本文を保存する。今回の会話内容を別の ChatGPT 会話としてアーカイブしない。ブラウザーで追加メッセージを送ったり、Google ドキュメントを新規作成したりせず、表示されているスレッド本文を記録する。
+## 再開方法
+中断時はこのファイル、progress.md、decisions.mdを読む。GitHubのmain先端と各対象ファイルのblob SHAを読み直し、未完了項目だけを続ける。現在の作業には未完了項目はない。
