@@ -38,3 +38,13 @@
 ## 後続コミットの追記欄
 
 この作業の次のまとまりを終えたら、日付、変更パス、確認事項、結果、commit SHA をここへ追記し、同じ SHA を `state.md` にも反映する。
+
+
+## 2026-11-22 — 最終確認
+
+- `conversation.md` を作業中の可視進捗メッセージまで更新。コミット: `667044b21d3a79daba1fc02a140a5e85d7bcc800`。
+- GitHub から `main` の先端、`gemini/neon/` と `sagyo_workflow/` の一覧、会話・README・進捗・判断・状態ファイルを再取得した。読み取りはすべて成功した。
+- `gemini/neon/` に `README.md` と `conversation.md` があり、`sagyo_workflow/` に README、テンプレート、判断、進捗、状態の 5 ファイルがあることを確認した。
+- `README.md` の相対リンク先 6 件がすべて存在することを確認した。
+- 確認時点で `main` の先端は transcript 更新コミット `667044b21d3a79daba1fc02a140a5e85d7bcc800` だった。最終状態ファイルの更新はこの後に行う。
+- 未完了作業は状態ファイルを完了に更新することのみ。
