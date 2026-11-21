@@ -4,7 +4,7 @@
 
 ## まず読むもの
 
-1. [会話記録](conversation.md) — ユーザーとGeminiの9往復を、話者見出し・回答内見出し・リスト・コード例で再構成。
+1. [トポス創発法.md](トポス創発法.md) — Gemini会話48往復（ユーザー48件・Gemini回答48件、計96発言）を画面順にMarkdownで収録。
 2. [作業記録](sagyo_workflow/README.md) — 記録の作り方、確認方法、再利用の考え方。
 3. [進捗ログ](sagyo_workflow/progress.md) — 作業とコミットを時系列で記録。
 4. [判断記録](sagyo_workflow/decisions.md) — 保存場所や書式を選んだ理由。
